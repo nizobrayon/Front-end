@@ -1,0 +1,17 @@
+body {
+    background-color:bisque;
+    color: rgb(0, 0, 0);
+    font: size 40px;
+    padding: 22px;
+
+}
+img {
+    border: 2px solid black
+}
+
+button {
+    background-color: blueviolet;
+    padding: 22px;
+    border-radius: 1000px;
+
+}
