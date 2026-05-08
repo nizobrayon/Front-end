@@ -1,20 +1,14 @@
 body {
-    background-color:bisque;
-    color: rgb(0, 0, 0);
-    font: size 40px;
-    padding: 22px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(64, 74, 74);
+    height: 700px;
+    border: 2px solid rgb(255, 251, 251);
 }
+
 img {
-    border: 2px solid black
-}
 
-button {
-    background-color: blueviolet;
-    padding: 22px;
-    border-radius: 1000px;
-
-}
-.titulo {
-    color: red;
-};
+    width: 500px;
+    height: auto;
+    border: 2px solid black;
