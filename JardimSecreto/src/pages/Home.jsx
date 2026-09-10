@@ -1,15 +1,15 @@
-import Navbar from "../components/Navbar"
+import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import Produtos from "../components/Produtos";
-import Footer from "../components/Footer";
+import Produto from "../components/Produtos";
 import Frase from "../components/Frase";
+import Footer from "../components/Footer";
 
-function Home (){
+function Home() {
     return (
         <>
-            <Navbar/>
+            <Navbar />
             <Hero/>
-            <Produtos/>
+            <Produto/>
             <Frase/>
             <Footer/>
         </>

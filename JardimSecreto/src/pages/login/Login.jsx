@@ -1,43 +1,103 @@
-import "./Login.css";
+import { useState } from "react";
+import { useNavigate } from "react-router";
+import "../login/Login.css";
 
 function Login() {
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+
+  const navigate = useNavigate();
+
+  function entrar(event) {
+    event.preventDefault();
+
+    if (!email || !senha) {
+      alert("Preencha todos os campos!");
+      return;
+    }
+
+    alert("Login realizado com sucesso!");
+
+    navigate("/home");
+  }
+
   return (
-    <div className="loginContainer">
-      <div className="login-box">
+    <main className="auth-page">
 
-        <h1>Jardim Secreto</h1>
+      <div className="auth-decoration auth-decoration-1"></div>
+      <div className="auth-decoration auth-decoration-2"></div>
 
-        <p className="login-subtitle">
-          Entre na sua conta
+      <section className="auth-card">
+
+        <p className="auth-subtitle">
+          Jardim Secreto
         </p>
 
-          <div className="input-group">
-            <label>E-mail</label>
+        <h1>
+          Entre na sua conta!
+        </h1>
+
+        <p className="auth-description">
+          Acesse sua conta para continuar.
+        </p>
+
+        <form onSubmit={entrar}>
+
+          <div className="form-group">
+            <label htmlFor="email">
+              E-mail
+            </label>
+
             <input
               type="email"
+              id="email"
               placeholder="Digite seu e-mail"
+              value={email}
+              onChange={(event) =>
+                setEmail(event.target.value)
+              }
             />
           </div>
 
-          <div className="input-group">
-            <label>Senha</label>
+          <div className="form-group">
+            <label htmlFor="senha">
+              Senha
+            </label>
+
             <input
               type="password"
+              id="senha"
               placeholder="Digite sua senha"
+              value={senha}
+              onChange={(event) =>
+                setSenha(event.target.value)
+              }
             />
           </div>
 
-          <button type="submit">
-            Entrar
+          <button
+            type="submit"
+            className="auth-button"
+          >
+            Acessar
           </button>
 
-        <p className="cadastro-text">
-          Ainda não possui uma conta?
-          <a href="../Cadastro/Cadastro.jsx"> Cadastre-se</a>
+        </form>
+
+        <p className="change-page">
+          Ainda não tem conta?{" "}
+
+          <button
+            type="button"
+            onClick={() => navigate("/cadastro")}
+          >
+            Cadastre-se
+          </button>
         </p>
 
-      </div>
-    </div>
+      </section>
+
+    </main>
   );
 }
 
