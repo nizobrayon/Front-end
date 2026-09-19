@@ -1,0 +1,236 @@
+/* Página principal */
+
+.pagina-pesquisa {
+  min-height: 100vh;
+  background-color: #f5f5f0;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Cabeçalho */
+
+.cabecalho-pesquisa {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.cabecalho-pesquisa h1 {
+  color: #4A5D23;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.cabecalho-pesquisa p {
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+}
+
+
+/* Barra de pesquisa */
+
+.barra-pesquisa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+
+.barra-pesquisa input {
+  width: 450px;
+  height: 50px;
+  padding: 0 18px;
+
+  border: 2px solid #4A5D23;
+  border-radius: 10px;
+
+  background-color: white;
+  color: #333;
+
+  font-size: 16px;
+  outline: none;
+}
+
+.barra-pesquisa input::placeholder {
+  color: #999;
+}
+
+.barra-pesquisa input:focus {
+  border-color: #6b8232;
+}
+
+
+/* Botão pesquisar */
+
+.barra-pesquisa button {
+  height: 50px;
+  padding: 0 22px;
+
+  background-color: #4A5D23;
+  color: white;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.barra-pesquisa button:hover {
+  background-color: #39491b;
+  transform: translateY(-2px);
+}
+
+
+/* Área dos resultados */
+
+.resultados-pesquisa {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+/* Card da planta */
+
+.card-planta {
+  display: flex;
+  align-items: center;
+
+  background-color: white;
+
+  padding: 20px;
+  margin-bottom: 18px;
+
+  border-radius: 15px;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s;
+}
+
+.card-planta:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Ícone da planta */
+
+.icone-planta {
+  width: 70px;
+  height: 70px;
+
+  min-width: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #e4ead5;
+
+  border-radius: 50%;
+
+  font-size: 35px;
+
+  margin-right: 20px;
+}
+
+
+/* Informações da planta */
+
+.informacoes-planta h2 {
+  color: #4A5D23;
+
+  font-size: 22px;
+
+  margin: 0 0 8px 0;
+}
+
+.informacoes-planta p {
+  color: #666;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+
+  margin: 0;
+}
+
+
+/* Mensagens */
+
+.mensagem {
+  text-align: center;
+
+  background-color: white;
+
+  padding: 25px;
+
+  border-radius: 12px;
+
+  color: #666;
+
+  font-size: 16px;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Responsividade para celular */
+
+@media (max-width: 700px) {
+
+  .pagina-pesquisa {
+    padding: 30px 15px;
+  }
+
+  .cabecalho-pesquisa h1 {
+    font-size: 27px;
+  }
+
+  .cabecalho-pesquisa p {
+    font-size: 14px;
+  }
+
+  .barra-pesquisa {
+    flex-direction: column;
+  }
+
+  .barra-pesquisa input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .barra-pesquisa button {
+    width: 100%;
+  }
+
+  .card-planta {
+    align-items: flex-start;
+  }
+
+  .icone-planta {
+    width: 55px;
+    height: 55px;
+    min-width: 55px;
+
+    font-size: 28px;
+
+    margin-right: 15px;
+  }
+
+  .informacoes-planta h2 {
+    font-size: 19px;
+  }
+
+  .informacoes-planta p {
+    font-size: 14px;
+  }
+}
