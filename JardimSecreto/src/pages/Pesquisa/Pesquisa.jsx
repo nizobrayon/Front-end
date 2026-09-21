@@ -8,32 +8,23 @@ function Pesquisa() {
     {
       id: 1,
       nome: "Rosa",
+      valor: 25.00,
       descricao:
         "Uma planta conhecida por suas flores bonitas e perfumadas.",
     },
     {
       id: 2,
       nome: "Girassol",
+      valor: 18.50,
       descricao:
         "Planta conhecida por suas flores amarelas e por acompanhar a luz do sol.",
     },
     {
       id: 3,
       nome: "Orquídea",
+      valor: 45.00,
       descricao:
         "Uma planta ornamental muito utilizada para decoração.",
-    },
-    {
-      id: 4,
-      nome: "Lavanda",
-      descricao:
-        "Planta conhecida pelo seu aroma agradável e suas flores roxas.",
-    },
-    {
-      id: 5,
-      nome: "Samambaia",
-      descricao:
-        "Planta bastante utilizada em ambientes internos e externos.",
     },
   ];
 
@@ -62,7 +53,7 @@ function Pesquisa() {
           onChange={(e) => setPesquisa(e.target.value)}
         />
 
-        <button onClick={() => setPesquisa(pesquisa)}>
+        <button>
           🔍 Pesquisar
         </button>
 
@@ -70,11 +61,7 @@ function Pesquisa() {
 
       <div className="resultados-pesquisa">
 
-        {pesquisa === "" ? (
-          <p className="mensagem">
-            Digite o nome de uma planta para pesquisar.
-          </p>
-        ) : resultados.length === 0 ? (
+        {resultados.length === 0 ? (
           <p className="mensagem">
             Nenhuma planta encontrada.
           </p>
@@ -94,6 +81,10 @@ function Pesquisa() {
                 <p>
                   {planta.descricao}
                 </p>
+
+                <strong>
+                  R$ {planta.valor.toFixed(2).replace(".", ",")}
+                </strong>
 
               </div>
 
